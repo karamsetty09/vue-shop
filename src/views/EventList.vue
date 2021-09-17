@@ -3,7 +3,7 @@
   <h1>Events Listing</h1>
 
   <EventCard/>
-  <router-link :to="{name:'event-show'}">Show Event #1</router-link> 
+  
 </div>
 </template>
 
