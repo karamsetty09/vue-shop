@@ -6,7 +6,7 @@
   <ul>
     <li v-for="category in categories" :key="category">{{category}}</li>
   </ul>
- 
+  <p>{{ getEvent(1) }}</p>
 </div>
   
 </template>
@@ -20,6 +20,9 @@ export default {
 
 // easy way to use array when no renaming is required.
 computed: {
+  getEvent() {
+    return this.$store.getters.getEventById
+  },
   catLength(){
     return this.$store.getters.catLength
   },

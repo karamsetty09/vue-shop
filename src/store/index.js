@@ -16,10 +16,10 @@ export default new Vuex.Store({
       'community'
     ],
     todos: [
-      {id: 1, text: '', done: true },
-      {id: 2, text: '', done: false},
-      {id: 3, text: '', done: true},
-      {id: 4, text: '', done: false}
+      { id: 1, text: '...', done: true },
+      { id: 2, text: '...', done: false },
+      { id: 3, text: '...', done: true },
+      { id: 4, text: '...', done: false }
     ]
   },
   mutations: {},
@@ -31,6 +31,9 @@ export default new Vuex.Store({
     },
     doneTodos: state =>{
       return state.todos.filter(todo => todo.done)
+    },
+    getEventById: (state) => (id) => {
+      return state.events.find(event => event.id === id)
     },
     activeTodosCount: (state)=>{
       return state.todos.filter(todo => !todo.done).length
