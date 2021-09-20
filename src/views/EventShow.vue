@@ -40,8 +40,8 @@ export default {
       })
   }
 };
-
 </script>
+
 <style scoped>
     .location {
       margin-bottom: 0;
