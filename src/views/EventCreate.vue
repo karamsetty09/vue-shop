@@ -2,11 +2,12 @@
 <div>
   <h1>Create Event, {{user.id}}</h1>
   <p> This event was created by {{user.name}} </p>
+  <p>{{ getEventById(2) }}</p>
   <p> Length of Categories: {{catLength}}</p>
   <ul>
     <li v-for="category in categories" :key="category">{{category}}</li>
   </ul>
-  <p>{{ getEvent(1) }}</p>
+  
 </div>
   
 </template>
@@ -14,18 +15,13 @@
 
 <script>
 
-import {mapState} from 'vuex'
+import {mapState, mapGetters} from 'vuex'
 
 export default {
 
 // easy way to use array when no renaming is required.
 computed: {
-  getEvent() {
-    return this.$store.getters.getEventById
-  },
-  catLength(){
-    return this.$store.getters.catLength
-  },
+  ...mapGetters(['getEventById','catLength']),
   ...mapState(['user', 'categories'])
   }
 
