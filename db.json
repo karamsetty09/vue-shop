@@ -1,49 +1,121 @@
 {
-    "events": [
-      {
-        "id": 5928101,
-        "user": {
-          "id": "abc123",
-          "name": "Adam"
-        },
-        "category": "animal welfare",
-        "organizer": "Adam",
-        "title": "Cat Cabaret",
-        "description": "Yay felines!",
-        "location": "Meow Town",
-        "date": "2019-01-03T21:54:00.000Z",
-        "time": "2:00",
-        "attendees": []
+  "events": [
+    {
+      "id": 5928101,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
       },
-      {
-        "id": 8419988,
-        "user": {
-          "id": "abc123",
-          "name": "Adam"
-        },
-        "category": "animal welfare",
-        "organizer": "Adam",
-        "title": "Kitty Cluster",
-        "description": "Yay cats!",
-        "location": "Catlandia",
-        "date": "2019-01-31T22:09:00.000Z",
-        "time": "7:00",
-        "attendees": []
+      "category": "animal welfare",
+      "organizer": "Adam",
+      "title": "Cat Cabaret",
+      "description": "Yay felines!",
+      "location": "Meow Town",
+      "date": "2019-01-03T21:54:00.000Z",
+      "time": "2:00",
+      "attendees": []
+    },
+    {
+      "id": 8419988,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
       },
-      {
-        "id": 4582797,
-        "user": {
-          "id": "abc123",
-          "name": "Adam"
-        },
-        "category": "animal welfare",
-        "organizer": "Adam",
-        "title": "Puppy Parade",
-        "description": "Yay pups!",
-        "location": "Puptown ",
-        "date": "2019-02-02T23:27:00.000Z",
-        "time": "1:00",
-        "attendees": []
-      }
-    ]
-  }
+      "category": "animal welfare",
+      "organizer": "Adam",
+      "title": "Kitty Cluster",
+      "description": "Yay cats!",
+      "location": "Catlandia",
+      "date": "2019-01-31T22:09:00.000Z",
+      "time": "7:00",
+      "attendees": []
+    },
+    {
+      "id": 4582797,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "animal welfare",
+      "organizer": "Adam",
+      "title": "Puppy Parade",
+      "description": "Yay pups!",
+      "location": "Puptown ",
+      "date": "2019-02-02T23:27:00.000Z",
+      "time": "1:00",
+      "attendees": []
+    },
+    {
+      "id": 6993512,
+      "user": {
+        "id": "123abc",
+        "name": "venkata Karamsetty"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "123abc",
+        "name": "venkata Karamsetty"
+      },
+      "title": "Vue.js",
+      "description": "vuex mastery and vue usage",
+      "location": "sydney",
+      "date": "2021-09-01T18:57:00.000Z",
+      "time": "19:00",
+      "attendees": []
+    },
+    {
+      "id": 9528373,
+      "user": {
+        "id": "123abc",
+        "name": "venkata Karamsetty"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "123abc",
+        "name": "venkata Karamsetty"
+      },
+      "title": "Working?",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 2958773,
+      "user": {
+        "id": "123abc",
+        "name": "venkata Karamsetty"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "123abc",
+        "name": "venkata Karamsetty"
+      },
+      "title": "fjgkldlk",
+      "description": "fgdfg",
+      "location": "fgdfd",
+      "date": "2021-08-31T19:04:00.000Z",
+      "time": "3:00",
+      "attendees": []
+    },
+    {
+      "id": 8465347,
+      "user": {
+        "id": "123abc",
+        "name": "venkata Karamsetty"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "123abc",
+        "name": "venkata Karamsetty"
+      },
+      "title": "Vue.js Learning",
+      "description": "vuex mastery and commanding",
+      "location": "wollongong",
+      "date": "2021-09-09T19:12:00.000Z",
+      "time": "10:00",
+      "attendees": []
+    }
+  ]
+}
