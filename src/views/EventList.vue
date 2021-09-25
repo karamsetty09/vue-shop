@@ -11,8 +11,10 @@
       >
         Prev Page</router-link
       >
+      
     </template>
     <router-link
+      
       :to="{ name: 'event-list', query: { page: page + 1 } }"
       rel="next"
     >
@@ -35,14 +37,18 @@ export default {
     };
   },
   created() {
+    this.perPage = 3;
     this.$store.dispatch("fetchEvents", {
-      perPage: 3,
+      perPage: this.perPage,
       page: this.page,
     });
   },
   computed: {
     page() {
       return parseInt(this.$route.query.page) || 1;
+    },
+    hasNextPage() {
+      return this.eventsTotal > this.page * this.perPage;
     },
     ...mapState(["events"]),
   },
