@@ -17,7 +17,7 @@ export default new Vuex.Store({
     ],
     events: [],
     eventsTotal: 0,
-    event: {}
+    event: {},
   },
   mutations: {
     ADD_EVENT(state, event) {
@@ -29,9 +29,9 @@ export default new Vuex.Store({
     SET_EVENTS_TOTAL(state, eventsTotal) {
       state.eventsTotal = eventsTotal;
     },
-    SET_EVENT(state, event){
-      state.event = event
-    }
+    SET_EVENT(state, event) {
+      state.event = event;
+    },
   },
   actions: {
     createEvent({ commit }, event) {
@@ -53,15 +53,20 @@ export default new Vuex.Store({
           console.log("There was an error:" + error.response);
         });
     },
-    fetchEvent({commit}, id){
-      EventService.getEvent(id)
-      .then((response) => {
-        commit('SET_EVENT', response.data) ;
-      })
-      .catch((error) => {
-        console.log("There was an error:", error.response);
-      });
-    }
+    fetchEvent({ commit, getters }, id) {
+      var event = getters.getEventById(id);
+      if (event) {
+        commit("SET_EVENT", event);
+      } else {
+        EventService.getEvent(id)
+          .then((response) => {
+            commit("SET_EVENT", response.data);
+          })
+          .catch((error) => {
+            console.log("There was an error:", error.response);
+          });
+      }
+    },
   },
   modules: {},
   getters: {
@@ -72,7 +77,7 @@ export default new Vuex.Store({
       return state.todos.filter((todo) => todo.done);
     },
     getEventById: (state) => (id) => {
-      return state.todos.find((event) => event.id === id);
+      return state.events.find((event) => event.id === id);
     },
     activeTodosCount: (state) => {
       return state.todos.filter((todo) => !todo.done).length;

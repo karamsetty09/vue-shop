@@ -29,13 +29,13 @@
 </template>
 
 <script>
-import {mapState} from "vuex";
+import { mapState } from "vuex";
 export default {
   props: ["id"],
   created() {
-    this.$store.dispatch('fetchEvent', this.id)
+    this.$store.dispatch("fetchEvent", this.id);
   },
-  computed: mapState(['event'])
+  computed: mapState(["event"]),
 };
 </script>
 
